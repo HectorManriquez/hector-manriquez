@@ -139,6 +139,17 @@ app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   res.send(`<!doctype html>${html}`);
 });
 
+/*
+//
+// Connect to Mongodb
+// -----------------------------------------------------------------------------
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGOLAB_URI);
+mongoose.connection.on('error', () => {
+  console.error('MongoDB Connection Error. Please make sure that MongoDB is running.');
+  process.exit(1);
+});
+*/
+
 //
 // Launch the server
 // -----------------------------------------------------------------------------
