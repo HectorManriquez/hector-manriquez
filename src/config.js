@@ -14,14 +14,6 @@ export const host = process.env.WEBSITE_HOSTNAME || `localhost:${port}`;
 
 // export const databaseUrl = process.env.DATABASE_URL || 'sqlite:database.sqlite';
 export const databaseUrl = process.env.DATABASE_URL || 'mysql://root:testPassword@localhost:3306/REACT_DB';
-/**
- * Connect to MongoDB.
- */
-mongoose.connect(process.env.MONGODB_URI || process.env.MONGOLAB_URI);
-mongoose.connection.on('error', () => {
-  console.error('MongoDB Connection Error. Please make sure that MongoDB is running.');
-  process.exit(1);
-});
 
 export const analytics = {
 
