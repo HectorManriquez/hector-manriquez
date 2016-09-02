@@ -13,13 +13,14 @@ import bluebird from 'bluebird';
 export const port = process.env.PORT || 3000;
 export const host = process.env.WEBSITE_HOSTNAME || `localhost:${port}`;
 
-// connection url and connection options for mongoose
+// Connection url and connection options for mongoose
+// Adding promiseLibrary in options in case I want to use MongoDB driver
 export const databaseUrl = process.env.DATABASE_URL || 'mongodb://localhost/graphql';
 export const databaseOptions = {
   server: {
     poolSize: 4
   },
-  promiseLibrary: require('bluebird')
+  promiseLibrary: bluebird
 };
 
 export const analytics = {
