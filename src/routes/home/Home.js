@@ -13,18 +13,18 @@ import s from './Home.css';
 
 const title = 'Interesting Reads';
 
-function Home({ news }, context) {
+function Home({ articles }, context) {
   context.setTitle(title);
   return (
     <div className={s.root}>
       <div className={s.container}>
         <h1 className={s.title}>Worth a Read</h1>
-        <ul className={s.news}>
-          {news.map((item, index) => (
-            <li key={index} className={s.newsItem}>
-              <a href={item.link} className={s.newsTitle}>{item.title}</a>
+        <ul className={s.articles}>
+          {articles.map((item, index) => (
+            <li key={index} className={s.articlesItem}>
+              <a href={item.link} className={s.articlesTitle}>{item.title}</a>
               <span
-                className={s.newsDesc}
+                className={s.articlesDesc}
                 dangerouslySetInnerHTML={{ __html: item.contentSnippet }}
               />
             </li>
@@ -36,7 +36,7 @@ function Home({ news }, context) {
 }
 
 Home.propTypes = {
-  news: PropTypes.arrayOf(PropTypes.shape({
+  articles: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     contentSnippet: PropTypes.string,
