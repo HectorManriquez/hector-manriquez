@@ -7,20 +7,17 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import { GraphQLList as List } from 'graphql';
-import Promise from 'bluebird';
-import fetch from '../../core/fetch';
-import ArticleLinkType from '../types/ArticleLinkType';
-
-// React.js News Feed (RSS)
-const path = '/articles';
+import {GraphQLList as List} from 'graphql';
+import ArticleType from '../types/ArticleType';
+import { Article } from '../models';
 
 let items = [];
 let lastFetchTask;
 let lastFetchTime = new Date(1970, 0, 1);
+let getArticles = Article.find({}).exec();
 
 const articles = {
-  type: new List(ArticleLinkType),
+  type: new List(ArticleType),
   resolve() {
     if (lastFetchTask) {
       return lastFetchTask;
@@ -28,12 +25,9 @@ const articles = {
 
     if ((new Date() - lastFetchTime) > 1000 * 60 * 10 /* 10 mins */) {
       lastFetchTime = new Date();
-      lastFetchTask = fetch(path)
-        .then(response => response.json())
+      lastFetchTask = getArticles
         .then(data => {
-          if (data.responseStatus === 200) {
-            items = data.responseData.feed.entries;
-          }
+          items = data;
 
           return items;
         })
