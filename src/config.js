@@ -8,12 +8,19 @@
  */
 
 /* eslint-disable max-len */
+import bluebird from 'bluebird';
 
 export const port = process.env.PORT || 3000;
 export const host = process.env.WEBSITE_HOSTNAME || `localhost:${port}`;
 
-// export const databaseUrl = process.env.DATABASE_URL || 'sqlite:database.sqlite';
-export const databaseUrl = process.env.DATABASE_URL || 'mysql://root:testPassword@localhost:3306/REACT_DB';
+// connection url and connection options for mongoose
+export const databaseUrl = process.env.DATABASE_URL || 'mongodb://localhost/graphql';
+export const databaseOptions = {
+  server: {
+    poolSize: 4
+  },
+  promiseLibrary: require('bluebird')
+};
 
 export const analytics = {
 
