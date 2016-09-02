@@ -21,15 +21,15 @@ function Header() {
     <div className={s.root}>
       <div className={s.container}>
         <Navigation className={s.nav}/>
-        <a target="_blank" href="https://github.com/Keitarokido">
+        <a href="https://github.com/Keitarokido">
           <img src={logoUrlGH} width="38" height="38" alt="GitHub"/>
         </a>
         <span className={s.spacer}> | </span>
-        <a target="_blank" href="https://www.linkedin.com/in/hectormanriquez">
+        <a href="https://www.linkedin.com/in/hectormanriquez">
           <img src={logoUrlLI} width="48" height="38" alt="Linked In"/>
         </a>
         <span className={s.spacer}> | </span>
-        <a target="_blank" href="http://stackoverflow.com/users/6288637/keitarokido">
+        <a href="http://stackoverflow.com/users/6288637/keitarokido">
           <img src={logoUrlSO} width="38" height="38" alt="Stack Overflow"/>
         </a>
         {/*<Link className={s.brand} to="/about">*/}
