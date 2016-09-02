@@ -11,7 +11,7 @@ import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Contact.css';
 
-const title = 'Contact Us';
+const title = 'Contact Me';
 
 function Contact(props, context) {
   context.setTitle(title);
@@ -19,7 +19,48 @@ function Contact(props, context) {
     <div className={s.root}>
       <div className={s.container}>
         <h1>{title}</h1>
-        <p>...</p>
+        <form method="post">
+          <div className={s.formGroup}>
+            <label className={s.label} htmlFor="name">
+              Name:
+            </label>
+            <input
+              className={s.input}
+              id="name"
+              type="text"
+              name="name"
+              autoFocus
+            />
+          </div>
+          <div className={s.formGroup}>
+            <label className={s.label} htmlFor="email">
+              Email address:
+            </label>
+            <input
+              className={s.input}
+              id="email"
+              type="text"
+              name="email"
+            />
+          </div>
+          <div className={s.formGroup}>
+            <label className={s.label} htmlFor="message">
+              Your message:
+            </label>
+            <textarea
+              className={s.inputTextArea}
+              id="message"
+              type="text"
+              name="message"
+              rows="4"
+            />
+          </div>
+          <div className={s.formGroup}>
+            <button className={s.button} type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
