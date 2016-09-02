@@ -13,15 +13,15 @@ import {
   GraphQLNonNull as NonNull,
 } from 'graphql';
 
-const ArticleLinkType = new ObjectType({
+const ArticleType = new ObjectType({
   name: 'ArticleLink',
   fields: {
     title: { type: new NonNull(StringType) },
     link: { type: new NonNull(StringType) },
     author: { type: StringType },
-    publishedDate: { type: new NonNull(StringType) },
+    publishedDate: { type: StringType },
     contentSnippet: { type: StringType },
   },
 });
 
-export default ArticleLinkType;
+export default ArticleType;
