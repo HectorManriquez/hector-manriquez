@@ -19,7 +19,7 @@ function Contact(props, context) {
     <div className={s.root}>
       <div className={s.container}>
         <h1>{title}</h1>
-        <form method="post">
+        <form action="/contact" method="post">
           <div className={s.formGroup}>
             <label className={s.label} htmlFor="name">
               Name:
