@@ -11,14 +11,16 @@ import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Contact.css';
 
-const title = 'Contact Me';
+const title = 'Contact';
 
 function Contact(props, context) {
   context.setTitle(title);
   return (
     <div className={s.root}>
       <div className={s.container}>
-        <h1>{title}</h1>
+        <h1>Email Me</h1>
+        <a href="mailto:hector.j.manriquez@gmail.com">Hector.j.manriquez@gmail.com</a>
+        <h1>Send A Message</h1>
         <form action="/contact" method="post">
           <div className={s.formGroup}>
             <label className={s.label} htmlFor="name">
