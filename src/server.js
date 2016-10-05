@@ -15,6 +15,7 @@ import bodyParser from 'body-parser';
 import expressJwt from 'express-jwt';
 import expressGraphQL from 'express-graphql';
 import jwt from 'jsonwebtoken';
+import nodemailer from 'nodemailer'
 import React from 'react';
 import ReactDOM from 'react-dom/server';
 import Html from './components/Html';
@@ -78,6 +79,36 @@ app.use('/graphql', expressGraphQL(req => ({
   rootValue: {request: req},
   pretty: process.env.NODE_ENV !== 'production',
 })));
+
+//
+// Post handler for nodemailer
+//
+app.post('/contact', (req, res) => {
+  const data = req.body;
+  console.log(data);
+
+  const transporter = nodemailer.createTransport('SMTP', {
+    service: "Gmail",
+    auth: {
+      user: "",
+      pass: ""
+    }
+  });
+
+  const mailData = {
+    from: "keitarokido@yahoo.com",
+    to: "keitarokido@yahoo.com",
+    subject: "Testing",
+    text: "Testing text"
+  };
+
+  transporter.sendMail(mailData, (err, info) => {
+    if (err) {
+      return console.log(err);
+    }
+    console.log(('Message sent" ' + info.response));
+  });
+});
 
 //
 // Register server-side rendering middleware
