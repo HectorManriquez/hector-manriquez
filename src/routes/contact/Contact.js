@@ -18,7 +18,7 @@ function Contact(props, context) {
   return (
     <div className={s.root}>
       <div className={s.container}>
-        <h1>Email Me</h1>
+        <h1>Email Me Directly</h1>
         <a href="mailto:hector.j.manriquez@gmail.com">Hector.j.manriquez@gmail.com</a>
         <h1>Send A Message</h1>
         <form action="/contact" method="post">
@@ -44,6 +44,18 @@ function Contact(props, context) {
               id="email"
               type="text"
               name="email"
+              required
+            />
+          </div>
+          <div className={s.formGroup}>
+            <label className={s.label} htmlFor="subject">
+              Subject:
+            </label>
+            <input
+              className={s.input}
+              id="subject"
+              type="text"
+              name="subject"
               required
             />
           </div>
