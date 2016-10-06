@@ -86,19 +86,21 @@ app.use('/graphql', expressGraphQL(req => ({
 const transporter = nodemailer.createTransport(smtpConfig);
 app.post('/contact', (req, res) => {
   const formData = req.body;
-  console.log(formData);
 
   const mailOptions = {
+    from: '"Portfolio Message" <email@gmail.com>',
     to: process.env.GMAIL_EMAIL,
-    subject: "New Message From Portfolio",
+    subject: formData.subject,
     text: formData.name + "\n" + formData.email + "\n" + formData.message
   };
 
   transporter.sendMail(mailOptions, (err, info) => {
     if (err) {
-      return console.log(err);
+      console.log('Message unsuccessful ' + err);
+    } else {
+      console.log('Message sent ' + info.response);
     }
-    return console.log(('Message sent" ' + info.response));
+    res.redirect('/contact')
   });
 });
 
