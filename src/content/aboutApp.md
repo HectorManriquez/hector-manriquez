@@ -3,6 +3,6 @@ title: About App
 component: ContentPage
 ---
 
-### Delve Into my Thought Process on Creating my Website
+### Delve into my thought process on creating my website
 
 [My Workflowy Page](https://workflowy.com/s/AkvH2yGEN9)
