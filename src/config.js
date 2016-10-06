@@ -23,6 +23,16 @@ export const databaseOptions = {
   promiseLibrary: bluebird
 };
 
+export const smtpConfig = {
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user: process.env.GMAIL_EMAIL,
+    pass: process.env.GMAIL_PASS
+  }
+};
+
 export const analytics = {
 
   // https://analytics.google.com/
