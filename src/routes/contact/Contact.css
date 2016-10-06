@@ -81,9 +81,9 @@
   padding: 10px 16px;
   width: 25%;
   outline: 0;
-  border: 1px solid #373277;
+  border: 1px solid #616161;
   border-radius: 0;
-  background: #373277;
+  background: #616161;
   color: #fff;
   text-align: center;
   text-decoration: none;
@@ -93,7 +93,7 @@
 }
 
 .button:hover {
-  background: rgba(54, 50, 119, 0.8);
+  background: #999999;
 }
 
 .button:focus {
