@@ -32,6 +32,7 @@ function Contact(props, context) {
               type="text"
               name="name"
               autoFocus
+              required
             />
           </div>
           <div className={s.formGroup}>
@@ -43,6 +44,7 @@ function Contact(props, context) {
               id="email"
               type="text"
               name="email"
+              required
             />
           </div>
           <div className={s.formGroup}>
@@ -55,6 +57,7 @@ function Contact(props, context) {
               type="text"
               name="message"
               rows="4"
+              required
             />
           </div>
           <div className={s.formGroup}>
