@@ -28,7 +28,7 @@ import schema from './data/schema';
 
 import routes from './routes';
 import assets from './assets'; // eslint-disable-line import/no-unresolved
-import {port, auth} from './config';
+import {port, auth, smtpConfig} from './config';
 
 const app = express();
 
@@ -82,31 +82,23 @@ app.use('/graphql', expressGraphQL(req => ({
 
 //
 // Post handler for nodemailer
-//
+// -----------------------------------------------------------------------------
+const transporter = nodemailer.createTransport(smtpConfig);
 app.post('/contact', (req, res) => {
-  const data = req.body;
-  console.log(data);
+  const formData = req.body;
+  console.log(formData);
 
-  const transporter = nodemailer.createTransport('SMTP', {
-    service: "Gmail",
-    auth: {
-      user: "",
-      pass: ""
-    }
-  });
-
-  const mailData = {
-    from: "keitarokido@yahoo.com",
-    to: "keitarokido@yahoo.com",
-    subject: "Testing",
-    text: "Testing text"
+  const mailOptions = {
+    to: process.env.GMAIL_EMAIL,
+    subject: "New Message From Portfolio",
+    text: formData.name + "\n" + formData.email + "\n" + formData.message
   };
 
-  transporter.sendMail(mailData, (err, info) => {
+  transporter.sendMail(mailOptions, (err, info) => {
     if (err) {
       return console.log(err);
     }
-    console.log(('Message sent" ' + info.response));
+    return console.log(('Message sent" ' + info.response));
   });
 });
 
