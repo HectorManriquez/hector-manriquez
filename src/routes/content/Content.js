@@ -34,7 +34,7 @@ class Content extends Component {
   render() {
     return (
       <div className={s.root}>
-        <div className={s.container}>
+        <div className="container">
           {this.props.path === '/' ? null : <h1>{this.props.title}</h1>}
           <div dangerouslySetInnerHTML={{ __html: this.props.content || '' }} />
         </div>
