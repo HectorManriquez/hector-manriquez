@@ -20,24 +20,30 @@ function Header() {
   return (
     <div className={s.root}>
       <div className={s.container}>
-        <Navigation className={s.nav}/>
-        <a href="https://github.com/Keitarokido">
-          <img src={logoUrlGH} width="38" height="38" alt="GitHub"/>
-        </a>
-        <span className={s.spacer}> | </span>
-        <a href="https://www.linkedin.com/in/hectormanriquez">
-          <img src={logoUrlLI} width="48" height="38" alt="Linked In"/>
-        </a>
-        <span className={s.spacer}> | </span>
-        <a href="http://stackoverflow.com/users/6288637/keitarokido">
-          <img src={logoUrlSO} width="38" height="38" alt="Stack Overflow"/>
-        </a>
-        {/*<Link className={s.brand} to="/about">*/}
-          {/*<span className={s.brandTxt}>Hector Manriquez</span>*/}
-        {/*</Link>*/}
-        <div className={s.banner}>
-          <h1 className={s.bannerTitle}>Hector Manriquez</h1>
-          <p className={s.bannerDesc}>Full Stack Developer. All Around Game Changer.</p>
+        <div className="container">
+          <div className="row">
+            <Navigation className={s.nav}/>
+            <div className="col sm12 md4 valign-wrapper">
+              <a href="https://github.com/Keitarokido">
+                <img src={logoUrlGH} width="38" height="38" alt="GitHub"/>
+              </a>
+              <span className={s.spacer}> | </span>
+              <a href="https://www.linkedin.com/in/hectormanriquez">
+                <img src={logoUrlLI} width="48" height="38" alt="Linked In"/>
+              </a>
+              <span className={s.spacer}> | </span>
+              <a href="http://stackoverflow.com/users/6288637/keitarokido">
+                <img src={logoUrlSO} width="38" height="38" alt="Stack Overflow"/>
+              </a>
+            </div>
+            {/*<Link className={s.brand} to="/about">*/}
+            {/*<span className={s.brandTxt}>Hector Manriquez</span>*/}
+            {/*</Link>*/}
+          </div>
+          <div className={s.banner}>
+            <h1 className={s.bannerTitle}>Hector Manriquez</h1>
+            <p className={s.bannerDesc}>Full Stack Developer. All Around Game Changer.</p>
+          </div>
         </div>
       </div>
     </div>
