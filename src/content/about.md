@@ -5,6 +5,8 @@ component: ContentPage
 
 ![me](me.jpg)
 
-Coder and developer by passion. Tech and open source enthusiast.
+Coder and developer by passion.
 
-Currently enrolled at the Coding Bootcamp at UT Austin to quench my thirst for knowledge and to gain more insight into full stack web development.
+Tech and open source enthusiast.
+
+I am currently enrolled at the Coding Bootcamp at UT Austin to quench my thirst for knowledge and to gain more insight into full stack web development.
