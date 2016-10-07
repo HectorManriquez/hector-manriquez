@@ -3,7 +3,7 @@ title: About Me
 component: ContentPage
 ---
 
-![me](me.jpg)
+![me](me.jpg) {.center-align}
 
 Coder and developer by passion.
 
