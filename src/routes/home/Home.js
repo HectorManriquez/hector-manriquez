@@ -17,7 +17,7 @@ function Home({ articles }, context) {
   context.setTitle(title);
   return (
     <div className={s.root}>
-      <div className={s.container}>
+      <div className="container">
         <h1 className={s.title}>Worth a Read</h1>
         <ul className={s.articles}>
           {articles.map((item, index) => (
