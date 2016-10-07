@@ -16,6 +16,7 @@ import Link from '../Link';
 function Navigation({ className }) {
   return (
     <div className={cx(s.root, className)} role="navigation">
+      <div className="col sm12 md4 valign-wrapper">
       <Link className={s.link} to="/about">About</Link>
       <Link className={s.link} to="/portfolio">Portfolio</Link>
       <span className={s.spacer}> | </span>
@@ -23,6 +24,7 @@ function Navigation({ className }) {
       {/*<Link className={s.link} to="/login">Log in</Link>*/}
       {/*<span className={s.spacer}>or</span>*/}
       {/*<Link className={cx(s.link, s.highlight)} to="/register">Sign up</Link>*/}
+      </div>
     </div>
   );
 }
