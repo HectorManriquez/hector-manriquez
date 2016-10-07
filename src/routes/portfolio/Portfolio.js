@@ -20,7 +20,7 @@ function Portfolio({news}, context) {
       <div className="container">
         <h1>Portfolio</h1>
         <div className="row">
-          <div className="col s6 m6">
+          <div className="col s12 m6">
             <div className="card small">
               <div className="card-image waves-effect waves-block waves-light">
                 <img className="activator" src="/nyt-news-scraper.png"/>
@@ -39,7 +39,7 @@ function Portfolio({news}, context) {
               </div>
             </div>
           </div>
-          <div className="col s6 m6">
+          <div className="col s12 m6">
             <div className="card small">
               <div className="card-image waves-effect waves-block waves-light">
                 <img className="activator" src="/news-scraper.png"/>
@@ -57,7 +57,7 @@ function Portfolio({news}, context) {
               </div>
             </div>
           </div>
-          <div className="col s6 m6">
+          <div className="col s12 m6">
             <div className="card small">
               <div className="card-image waves-effect waves-block waves-light">
                 <img className="activator" src="/tile.png"/>
