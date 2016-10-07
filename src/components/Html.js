@@ -11,8 +11,7 @@ function Html({ title, description, style, script, children }) {
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <style id="css" dangerouslySetInnerHTML={{ __html: style }} />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
       </head>
       <body>
         <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
