@@ -12,6 +12,7 @@ import { join } from 'path';
 import Promise from 'bluebird';
 import fm from 'front-matter';
 import MarkdownIt from 'markdown-it';
+import markdownItAttrs from 'markdown-it-attrs'
 
 import {
   GraphQLString as StringType,
@@ -21,6 +22,9 @@ import {
 import ContentType from '../types/ContentType';
 
 const md = new MarkdownIt();
+
+// Adding markdown-it-attrs for adding classes
+md.use(markdownItAttrs);
 
 // A folder with Markdown/HTML content pages
 const CONTENT_DIR = join(__dirname, './content');
