@@ -17,7 +17,7 @@ function Contact(props, context) {
   context.setTitle(title);
   return (
     <div className={s.root}>
-      <div className={s.container}>
+      <div className="container">
         <h1>Email Me Directly</h1>
         <a href="mailto:hector.j.manriquez@gmail.com">Hector.j.manriquez@gmail.com</a>
         <h1>Send A Message</h1>
