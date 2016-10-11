@@ -13,7 +13,7 @@ import s from './Portfolio.css';
 
 const title = 'Portfolio';
 
-function Portfolio({news}, context) {
+function Portfolio(props, context) {
   context.setTitle(title);
   return (
     <div className={s.root}>
@@ -81,13 +81,6 @@ function Portfolio({news}, context) {
   );
 }
 
-Portfolio.propTypes = {
-  news: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    contentSnippet: PropTypes.string,
-  })).isRequired,
-};
 Portfolio.contextTypes = {setTitle: PropTypes.func.isRequired};
 
 export default withStyles(s)(Portfolio);
