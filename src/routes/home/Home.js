@@ -19,9 +19,9 @@ function Home({ articles }, context) {
     <div className={s.root}>
       <div className="container">
         <h1 className={s.title}>Worth a Read</h1>
-        <ul className={s.articles}>
+        <ul className={s.articles + ' collection'}>
           {articles.map((item, index) => (
-            <li key={index} className={s.articlesItem}>
+            <li key={index} className={s.articlesItem + ' collection-item'}>
               <a href={item.link} className={s.articlesTitle}>{item.title}</a>
               <span
                 className={s.articlesDesc}
