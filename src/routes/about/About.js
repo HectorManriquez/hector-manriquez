@@ -19,25 +19,30 @@ function About(props, context) {
     <div className={s.root}>
       <div className="container">
         <h1>{title}</h1>
-        <div className="center-align">
-          <img src="/me.jpg" className="responsive-img"/>
-        </div>
-        <p>
-          Coder and developer by passion.
-
-          Tech and open source enthusiast.
-
-          My name is Hector and I am an avid and strongly skilled individual in coding.
-          I am currently delving deeper into full stack web development but am also comfortable in working in any other
-          stack that is not web oriented.
-          I am a strong believer in the fundamentals and am always adapting to the current standards and technologies as
-          is necessary.
-          I am a strong believer in open source, iteration and improvement/optimization.
-
-          I am currently enrolled at the Coding Bootcamp at UT Austin to quench my thirst for knowledge and to gain more
-          insight into full stack web development.</p>
-        <h1>Technologies I've worked with</h1>
         <div className="row">
+          <div className="col s12 m4 l4 center-align">
+            <img src="/me.jpg"/>
+          </div>
+          <div className="col s12 m8 l8">
+            <ul className="collection">
+              <li className="collection-item">Coder/developer by passion.</li>
+              <li className="collection-item">Tech enthusiast.</li>
+              <li className="collection-item">Strong believer in open source, iteration and
+                improvement/optimization.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="row">
+          <div>
+            My name is Hector and I am a looking to become a full stack developer.
+            I believe in understanding all aspects of the stack to be a valuable asset no matter what I'm working on and
+            to be able to move around as needed.
+            I am constantly learning and adapting to the newer technologies and standards as is necessary.
+          </div>
+        </div>
+        <div className="row">
+          <h1>Technologies I've worked with</h1>
           <div className="col s12 m4 l4">
             <table>
               <thead>
@@ -46,36 +51,36 @@ function About(props, context) {
               </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>
-                    <img src="/html5.png" />
-                    HTML5
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="/css3.png" />
-                    CSS3
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="/javascript.png" />
-                    JavaScript
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="/react.png" />
-                    React
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="/jquery.png" />
-                    JQuery
-                  </td>
-                </tr>
+              <tr>
+                <td>
+                  <img src="/html5.png"/>
+                  HTML5
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/css3.png"/>
+                  CSS3
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/javascript.png"/>
+                  JavaScript
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/react.png"/>
+                  React
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="/jquery.png"/>
+                  JQuery
+                </td>
+              </tr>
               </tbody>
             </table>
           </div>
@@ -89,19 +94,19 @@ function About(props, context) {
               <tbody>
               <tr>
                 <td>
-                  <img src="/nodejs.png" />
+                  <img src="/nodejs.png"/>
                   Node.js
                 </td>
               </tr>
               <tr>
                 <td>
-                  <img src="/java.png" />
+                  <img src="/java.png"/>
                   Java
                 </td>
               </tr>
               <tr>
                 <td>
-                  <img src="/python.png" />
+                  <img src="/python.png"/>
                   Python
                 </td>
               </tr>
@@ -118,31 +123,31 @@ function About(props, context) {
               <tbody>
               <tr>
                 <td>
-                  <img src="/mongodb.png" />
+                  <img src="/mongodb.png"/>
                   MongoDB
                 </td>
               </tr>
               <tr>
                 <td>
-                  <img src="/oracle.png" />
+                  <img src="/oracle.png"/>
                   Oracle
                 </td>
               </tr>
               <tr>
                 <td>
-                  <img src="/ibmdb2.png" />
+                  <img src="/ibmdb2.png"/>
                   IBM DB2
                 </td>
               </tr>
               <tr>
                 <td>
-                  <img src="/sqlserver.png" />
+                  <img src="/sqlserver.png"/>
                   SQL Server
                 </td>
               </tr>
               <tr>
                 <td>
-                  <img src="/mysql.png" />
+                  <img src="/mysql.png"/>
                   MySQL
                 </td>
               </tr>
