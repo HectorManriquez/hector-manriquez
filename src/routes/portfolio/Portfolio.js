@@ -28,7 +28,7 @@ function Portfolio(props, context) {
               <div className="card-content">
               <span className="card-title activator grey-text text-darken-4">NYT News Scraper<i
                 className="material-icons right">more_vert</i></span>
-                <p><a href="http://www.hectormanriquez.com:3002">NYT News Scraper</a></p>
+                <p><a href="http://nytnews.hectormanriquez.com">NYT News Scraper</a></p>
               </div>
               <div className="card-reveal">
                 <span className="card-title grey-text text-darken-4">NYT News Scraper<i
@@ -47,7 +47,7 @@ function Portfolio(props, context) {
               <div className="card-content">
               <span className="card-title activator grey-text text-darken-4">News Scraper<i
                 className="material-icons right">more_vert</i></span>
-                <p><a href="http://www.hectormanriquez.com:3001">News Scraper</a></p>
+                <p><a href="http://news.hectormanriquez.com">News Scraper</a></p>
               </div>
               <div className="card-reveal">
                 <span className="card-title grey-text text-darken-4">News Scraper<i
