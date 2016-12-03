@@ -21,7 +21,7 @@ function About(props, context) {
         <h1>{title}</h1>
         <div className="row">
           <div className="col s12 m4 l4 center-align">
-            <img src="/me.jpg"/>
+            <img className="responsive-img" src="/me.jpg"/>
           </div>
           <div className="col s12 m8 l8">
             <ul className="collection">
